@@ -1,1 +1,5 @@
-Background = 
+background = 
+turquoise = 
+whithish = 
+base_gold = 
+yellow_gold = #FFC741
