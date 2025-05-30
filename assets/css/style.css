@@ -25,6 +25,18 @@ font-family: 'Poppins', sans-serif;
 /*-------------------------------------
 		1.General css (Reset code)
 --------------------------------------*/
+
+/*BASE COLORS*/
+:root{
+
+    --background:#0A1828;
+    --turquoise:#178582;
+    --whithish:#ccd4ed;
+    --base_gold:#BFA181;
+    --yellow_gold:#FFC741;
+}
+
+
 *{
     padding: 0;
     margin: 0;
@@ -37,11 +49,12 @@ font-family: 'Poppins', sans-serif;
 	-ms-box-sizing:border-box;
 	box-sizing:border-box;
 }
+
 body{
 	font-family: 'Poppins', sans-serif;
 	font-size:16px;
 	color: #676a81;
-	background: #0A1828;
+	background: var(--background);
     max-width:1920px;
     margin:0 auto;
 	overflow-x:hidden;
@@ -106,12 +119,12 @@ html,body{
 }
 @media (min-width: 1024px){}
 nav.navbar.bootsnav.no-background {
-    background-color: #0A1828;
+    background-color: var(--background);
     border: none;
 }
 
 nav.navbar.bootsnav {
-    background-color: #0A1828;
+    background-color: var(--background);
     border-bottom: transparent;
     box-shadow: 0 3px 15px rgba(0,0,0,.2);
 }
@@ -119,7 +132,7 @@ nav.navbar.bootsnav {
 /*.navbar-brand*/
 .navbar-header a.navbar-brand,.navbar-header a.navbar-brand:focus {
     display: inline-block;
-    color: #178582;
+    color: var(--turquoise);
     font-size: 20px;
     font-weight: 600;
     padding: 33px 0px 57px;
@@ -128,7 +141,7 @@ nav.navbar.bootsnav {
 
 .navbar-header a.navbar-brand:hover{
 display: inline-block;
-    color: #FFC741;
+    color: var(--yellow_gold);
     font-size: 20px;
     font-weight: 600;
     padding: 33px 0px 57px;
@@ -333,6 +346,24 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 /*-------------------------------------
         5.  Education
 --------------------------------------*/
+
+.timeline-wrapper {
+  display: flex;
+  justify-content: center;  /* Horizontally center the timelines */
+  align-items: flex-start;  /* Align to the top if they have different heights */
+  gap: 2rem;                /* Optional spacing between the two timelines */
+  padding: 2rem 1rem;       /* Add padding for aesthetics */
+}
+
+.single-horizontal-timeline {
+  /* Add desired width if needed */
+  max-width: 500px;
+  width: 100%;
+  background-color: var(--background);   /* Optional styling */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Optional styling */
+  padding: 1rem;
+  border-radius: 8px;
+}
 
 .education {
     background:  #0A1828;
@@ -573,11 +604,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     content: " ";
     width:100%;
     height: 100%;
-    background: #d92cf9;
-    background: -moz-linear-gradient(left, #d92cf9 0%, #b636ff 100%);
-    background: -webkit-linear-gradient(left, #d92cf9 0%,#b636ff 100%);
-    background: linear-gradient(to right, #d92cf9 0%,#b636ff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d92cf9', endColorstr='#b636ff',GradientType=1 );
+    background: var(--base_gold);    
     -webkit-transform:scale(0);
     -moz-transform:scale(0);
     -ms-transform:scale(0);
@@ -735,6 +762,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     -o-transition:.5s;
     transition: .5s;
 }
+
 .contact-form .single-contact-btn .contact-btn ,
 .contact-form .single-contact-btn .contact-btn:focus {
     margin-top:0px;
@@ -827,8 +855,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size: 20px;
     cursor: pointer;
     color: #fff;
-    background:#b636ff;
-	border:1px solid #b636ff;
+    background:var(--base_gold);
+	border:1px solid var(--base_gold);
 	border-radius:50%;
 	-webkit-transition: .5s; 
 	-moz-transition:.5s; 

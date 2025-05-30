@@ -1,5 +1,5 @@
-background = 
-turquoise = 
-whithish = 
-base_gold = 
+background = #0A1828
+turquoise = #178582
+whithish = #ccd4ed
+base_gold = #BFA181
 yellow_gold = #FFC741
