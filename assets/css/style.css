@@ -34,6 +34,7 @@ font-family: 'Poppins', sans-serif;
     --whithish:#ccd4ed;
     --base_gold:#BFA181;
     --yellow_gold:#FFC741;
+    --gray_base:#dbe8ec;
 }
 
 
@@ -286,7 +287,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     font-size: 16px;
     text-transform: capitalize;
 }
-.single-about-add-info p {font-weight:  300;border:  0;padding: 0;margin-top: 3px;}
+.single-about-add-info p {
+    font-weight:  300;
+    border:  0;
+    padding: 0;
+    margin-top: 3px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
 /*.single-about-txt*/
 
 /*.single-about-img */
@@ -313,7 +321,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     left: 0;
     width: 500px;
     height: 50px;
-    background: #1f2c6c;
+    background: var(--turquoise);
 }
 /*.ab-list-icon */
 .about-list-icon ul {
@@ -634,7 +642,21 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     border:  1px solid #e5ebf2;
 }
 
-.portfolio-content {padding-top: 100px;}
+.portfolio-content {padding-top: 50px;}
+
+.portfolio .portfolio-details .container .row{
+padding-top: 50px;
+}
+
+
+
+.portfolio .portfolio-details .container .row .col-sm-4 h2 {
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid #BFA181;
+    padding-top: 10px; 
+    padding-bottom: 10px;    
+}
 
 /* ---- .item ---- */
 .isotope:after {
@@ -670,12 +692,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     position:absolute;
     height:100%;
     width:100%;
-    background:rgba(31,44,108,.5);
+    background:rgba(31,44,108,.75);
     display:flex;
     align-items:center;
     text-transform: uppercase;
     justify-content:center;
-    flex-direction:row;
+    flex-direction:column;
     -webkit-transform:scale(0);
     -moz-transform:scale(0);
     -ms-transform:scale(0);
@@ -690,8 +712,23 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .isotope-overlay a {
     display: inline-block;
     color: #fff;
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
+}
+
+.isotope .isotope-overlay p.project-name{
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.isotope-overlay p {
+    display: inline-block;
+    color: var(--gray_base);
+    font-size: 12px;
+    text-align: center;
+    margin: 0 12px; /* Adds vertical margin */
 }
 .isotope .item:hover .isotope-overlay{
     -webkit-transform:scale(1);
